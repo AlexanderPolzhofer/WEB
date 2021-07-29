@@ -48,20 +48,24 @@ border-spacing: 0;
 }
 
 .div1{
-    font-size: large;
+    font-size: larger;
     font-style: italic;
     padding-top: 15px;
     padding-bottom: 15px;
 }
 
 .menu{
+    box-sizing: inherit;
     font-family: cursive;
     font-style: italic;
     border: black;
+    margin-left: 100px;
+    margin-right: 1900px;
     border-style: solid;
     padding-bottom: 5px;
     padding-top: 5px;
-    padding-inline-start: 5px;
+    padding-inline-start: 50px;
+    text-decoration: none;
 }
 
 .body{
@@ -70,10 +74,33 @@ border-spacing: 0;
 }
 
 .data{
-    padding-inline-start: 0%;
-    border-spacing: 3px;
-    border: 5px solid;
+   margin-left: 150 px;
+   font-size: xx-large;
+   font-family: serif;
+   color: gray;
 }
 
+#bild{
+    margin-left: 1500px;
+    height: 10%;
+    width: 10%;    
+}
 
+#data-tr1{
+    padding-left: 10px;
+    position: left;
+    border: solid;
+    box-sizing: border-boxs;
+}
 
+.button{
+    font-size: large;
+}
+
+#footer{
+    font-size: large;
+}
+
+.trl{
+    border-left: black;
+}
