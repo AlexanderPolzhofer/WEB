@@ -59,17 +59,16 @@ border-spacing: 0;
     font-family: cursive;
     font-style: italic;
     border: black;
-    margin-left: 100px;
-    margin-right: 1900px;
+    margin-left: 500px;
+    margin-right: 550px;
     border-style: solid;
     padding-bottom: 5px;
     padding-top: 5px;
-    padding-inline-start: 50px;
-    text-decoration: none;
+    padding-inline-start: 25px;
+    
 }
 
 .body{
-    background-color: grey;
     color: black;
 }
 
