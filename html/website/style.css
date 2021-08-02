@@ -48,24 +48,22 @@ border-spacing: 0;
 }
 
 .div1{
-    font-size: larger;
+    font-size: 32px;
+    font-weight: bold;
     font-style: italic;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    text-align: center;
+}
+
+#image1{
+    width: 10%;
+    height: 10%;
 }
 
 .menu{
+    text-align: center;
     box-sizing: inherit;
     font-family: cursive;
-    font-style: italic;
-    border: black;
-    margin-left: 500px;
-    margin-right: 550px;
-    border-style: solid;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    padding-inline-start: 25px;
-    
+    font-style: italic;  
 }
 
 .body{
@@ -80,9 +78,9 @@ border-spacing: 0;
 }
 
 #bild{
-    margin-left: 1500px;
-    height: 10%;
-    width: 10%;    
+    text-align: end;
+    height: 5%;
+    width: 5%;    
 }
 
 #data-tr1{
@@ -98,6 +96,7 @@ border-spacing: 0;
 
 #footer{
     font-size: large;
+    text-align-last: center;
 }
 
 .trl{
