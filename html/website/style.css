@@ -48,11 +48,12 @@ border-spacing: 0;
 }
 
 .div1{
-    font-size: 32px;
+    font-size: 26px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
     font-weight: bold;
     font-style: italic;
     text-align: center;
-    margin-top: 34px;
+    margin-top: 13px;
 }
 
 #image1{
@@ -85,21 +86,38 @@ border-spacing: 0;
     
 }
 
+
+#image3 {
+    width:15%;
+    height:15%
+}
+
+#picture{
+    margin-right: 55px;
+}
+
 .headline{
-    font-size: large;
+    font-size: larger;
     font-weight: bold;
     font-style: italic;
     margin-bottom: 13px;
 }
 
 .topic{
-    margin-top: 5px;
+    margin-top: 13px;
     margin-bottom: 5px;
     font-weight: bold;
+    
 }
 
 ul {
     list-style-type: disc;
+}
+
+#übermich {
+    font-size: large;
+    padding-block-end: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .data{
@@ -129,6 +147,7 @@ ul {
 #footer{
     font-size: large;
     text-align-last: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 .trl{
