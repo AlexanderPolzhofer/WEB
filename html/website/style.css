@@ -52,22 +52,54 @@ border-spacing: 0;
     font-weight: bold;
     font-style: italic;
     text-align: center;
+    margin-top: 34px;
 }
 
 #image1{
+    margin-top: 21px;
     width: 10%;
     height: 10%;
 }
 
 .menu{
+    margin-top: 13px;
     text-align: center;
     box-sizing: inherit;
     font-family: cursive;
     font-style: italic;  
 }
 
+#image2{
+    width: 100%;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
 .body{
     color: black;
+}
+
+.main{
+    margin:auto;
+    width: 1000px;
+    
+}
+
+.headline{
+    font-size: large;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 13px;
+}
+
+.topic{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: disc;
 }
 
 .data{
