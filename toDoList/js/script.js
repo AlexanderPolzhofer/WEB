@@ -7,10 +7,10 @@ document.getElementById("addTask").addEventListener("click", function () {
 });
 
 function addTask() {
-    let newTask = document.getElementById("txtNewTask").value;
+    let taskName = document.getElementById("txtNewTask").value;
     let taskResponsible = document.getElementById("txtResponsible").value;
     let task = {
-        name: newTask,
+        name: taskName,
         responsible: taskResponsible,
         isDone: false
     };
@@ -32,14 +32,14 @@ function printTaskList() {
 
 function getHTMLTasks() {
     let html = "";
-    let index = "";
+    let index = 0;
 
     tasks.forEach(element => {
         let checked = "";
         if (element.isDone) {
             checked = "checked";
         }
-        html += "<li><input onClick='markTask(this)' name = 'checkbox' data-index = '" + index + "' type ='checkbox' '" + checked + "'/> " + element.name + ' | ' + element.responsible + "</li > ";
+        html += "<li><input onClick ='markTask(this)' name ='checkbox' data-index='" + index + "' type='checkbox'" + checked + "/>" + element.name + " | " + element.responsible + "</li>";
         index++;
     });
     return html;
