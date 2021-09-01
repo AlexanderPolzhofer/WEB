@@ -8,30 +8,35 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
+    <script src="javascript.js" defer></script>
     <title>Document</title>
 </head>
 
 <body>
     <div class="wrapper">
         <div class="heading">
-            <h1>Gästebuch</h1>
+            <h1 id="headingText">Gästebuch</h1>
             <img id="pic1" src="jpg/painting2.png" alt="picturepainting">
         </div>
     </div>
 
+
     <div class="container">
-        <input type="text" id="taskDate" placeholder="Datum: tt.mm.jjjj" />
+        <input type="text" id="taskDate" placeholder="Datum: z.B. tt.mm.jjjj" />
         <input type="text" id="taskName" placeholder="Vorname Nachname" />
-        <button type="button" class="btn btn-secondary">Gästebucheintrag hinzufügen!</button>
     </div>
 
-    <div class="grid-container">
-        <div class="grid-item1"><input type="text" id="text1" placeholder="text1" /></div>
-        <div class="grid-item2"><input type="text" id="text2" placeholder="text2" /></div>
-        <div class="grid-item3"><button type="button" class="btn btn-secondary">Button</button></div>
-        <div class="grid-item4"><input type="text" id="text3" placeholder="Nachricht" /></div>
+    <div class="container">
+        <input type="text" id="taskNachricht" placeholder="Nachricht ..." />
     </div>
 
+    <div class="container">
+        <button type="button" id="button" class="btn btn-primary">Gästebucheintrag hinzufügen!</button>
+    </div>
+
+    <div class="content">
+        <ul id="messageList"></ul>
+    </div>
 
 </body>
 
