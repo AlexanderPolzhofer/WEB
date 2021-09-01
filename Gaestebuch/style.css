@@ -1,0 +1,38 @@
+.wrapper{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading{
+    text-align: center;
+}
+
+#pic1{
+    height: 200px;
+    width: 800px;
+}
+
+.container{
+    background-color: coral;
+   
+    padding:21px;   
+    text-align: center;
+}
+
+.input{
+    text-align: center;
+}
+
+.grid-container{
+    background-color: cornflowerblue;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto auto;    
+}
+
+.grid-item4{
+    grid-column-start: span1;
+    grid-column-end: span3;
+}
