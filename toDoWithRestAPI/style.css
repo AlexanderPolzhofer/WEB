@@ -1,0 +1,39 @@
+html *{
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    padding:21px;
+    display: flex;
+    justify-content: center;
+}
+
+.button{
+    margin:13px;
+    background-color: orange;
+    color: white;
+    border: none;
+    font-size: larger;
+    padding:13px;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color: rgb(220, 145, 5);
+}
+
+.content{
+    padding:21px;
+}
+
+.content li{
+    padding: 8px;
+    background-color: brown;
+    color: white;
+    margin-bottom: 1px;
+}
+
+.content li:hover{
+    cursor: pointer;
+    background-color: rgb(141, 45, 45);
+}
