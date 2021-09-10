@@ -6,6 +6,7 @@ let message = "";
 let hasBlackJack = false;
 let isAlive = true;
 let messageEl = document.getElementById("message-el");
+let sumEl = document.getElementById("sum-el");
 
 function clickOnButton() {
     document.getElementById("button").addEventListener("click", function () {
@@ -14,6 +15,7 @@ function clickOnButton() {
 }
 
 function startGame() {
+    sumEl.textContent="Sum: " + sum;
     if (sum <= 20) {
         message = "Do you want a new card?"
     } else if (sum === 21) {
