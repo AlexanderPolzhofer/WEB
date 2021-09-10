@@ -1,0 +1,42 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1{
+    color:orange;
+    text-align: center;
+}
+
+body{
+    background-image: url("jpg/pokerTableBackground.jpg");
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.container{
+    padding:8px;
+}
+
+.cards{
+    margin:5px;
+}
+
+.sum{
+    margin:5px;
+}
+
+#button{
+    background-color: orange;
+    color:#016f32;
+    padding:5px;
+    width: 150px;
+    font-size: large;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+}
+
+#button:hover{
+    background-color:goldenrod;
+    cursor: pointer;
+}
