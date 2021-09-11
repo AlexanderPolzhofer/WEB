@@ -11,6 +11,7 @@ body{
     background-size: cover;
     text-align: center;
     color: white;
+
 }
 
 .container{
@@ -21,14 +22,19 @@ body{
     margin:5px;
 }
 
-#sum{
+#sum-el{
     margin:5px;
 }
 
-#button{
+#player-el{
+    margin:5px;
+}
+
+button{
     background-color: orange;
     color:#016f32;
     padding:5px;
+    margin:5px;
     width: 150px;
     font-size: large;
     font-weight: bold;
@@ -36,7 +42,7 @@ body{
     border-radius: 2px;
 }
 
-#button:hover{
+button:hover{
     background-color:goldenrod;
     cursor: pointer;
 }
