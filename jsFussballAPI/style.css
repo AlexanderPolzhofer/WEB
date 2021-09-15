@@ -1,0 +1,17 @@
+*{
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container{
+    color:blue;
+}
+
+#teams{
+    list-style-type: none;
+    padding:2px;
+}
+
+#teams img{
+    width: 2%;
+    height: 2%;;
+}
