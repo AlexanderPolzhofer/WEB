@@ -18,22 +18,23 @@
         </div>
 
         <div class="ul">
-            <ul id="teams">
-
-            </ul>
+            <button id="buttonBundesliga" class="button"></button>
+            <ul id="teamsBundesliga"></ul>
         </div>
+        <div class="ul">
+            <ul id="teamsPremierLeague"></ul>
+        </div>
+
     </div>
 </body>
 
 </html>
 
 <script id="team-template" type="text/x-handlebars-template">
-<div class="row">
-    <div class="col-sm"></div>
-    <div class="col-sm"></div>
-    <div class="col-sm"></div>
-    <div class="col-sm"></div>
-</div>
-
-
-</script>
+    <div class="row" data-id = "{{id}}">
+        <div class="col-sm"><img src="{{crestUrl}}" width="50px" alt="clubLogo"></div>
+        <div class="col-sm"><a href="#" link ="teamLinkPlayers">{{name}}</a></div>
+        <div class="col-sm">{{address}}</div>
+        <div class="col-sm">{{email}}</div>
+    </div>
+ </script>
