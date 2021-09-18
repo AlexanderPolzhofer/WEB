@@ -17,12 +17,21 @@
             <h1>Fußball API</h1>
         </div>
 
+        <div class="button"><button id="buttonBundesliga">View Teams 1. Bundesliga</button></div>
+        <div class="button"><button id="buttonPremierLeague">View Teams Premier League</button></div>
+
+        
+        <div class="button"><button id="buttonStandings">View standings</button></div>
+
         <div class="ul">
-            <button id="buttonBundesliga" class="button"></button>
             <ul id="teamsBundesliga"></ul>
         </div>
         <div class="ul">
             <ul id="teamsPremierLeague"></ul>
+        </div>
+
+        <div class ="ul">
+            <ul id ="standings"></ul>
         </div>
 
     </div>
@@ -36,5 +45,13 @@
         <div class="col-sm"><a href="#" link ="teamLinkPlayers">{{name}}</a></div>
         <div class="col-sm">{{address}}</div>
         <div class="col-sm">{{email}}</div>
+    </div>
+ </script>
+
+ <script id="standings-template" type="text/x-handlebars-template">
+    <div class="row" data-id = "{{id}}">
+      
+        <div class="col-sm">{{score}}</div>
+        
     </div>
  </script>

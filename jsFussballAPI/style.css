@@ -4,6 +4,7 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
 
 .container{
     color:blue;
+    text-align: center;
 }
 
 #teamsBundesliga{
@@ -24,4 +25,11 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
 #teamsPremierLeague img{
     width: 2%;
     height: 2%;
+}
+
+.button{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
 }
