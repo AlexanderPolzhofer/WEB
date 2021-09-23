@@ -2,15 +2,26 @@
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.container{
-    color:blue;
-    text-align: center;
+
+#content{
+    padding: 34px;
 }
 
-#teamsBundesliga{
-    list-style-type: none;
-    padding:2px;
+.flex-container{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-style: solid;
+    border-color: gray;   
 }
+
+.container{
+    color:grey;
+    text-align: center;
+    padding: 21px;
+}
+
+
 
 #teamsBundesliga img{
     width: 2%;
@@ -27,9 +38,53 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
     height: 2%;
 }
 
-.button{
-    margin: 5px;
-    padding: 5px;
-    border-radius: 5px;
+
+
+footer{
     text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+
+.spinner {
+  animation: rotator 1.4s linear infinite;
+}
+
+@keyframes rotator {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(270deg); }
+}
+
+.path {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  animation:
+    dash 1.4 ease-in-out infinite, 
+    colors (1.4*4) ease-in-out infinite;
+}
+
+@keyframes colors {
+  0% { stroke: #4285F4; }
+  25% { stroke: #DE3E35; }
+  50% { stroke: #F7C223; }
+  75% { stroke: #1B9A59; }
+  100% { stroke: #4285F4; }
+}
+
+@keyframes dash {
+ 0% { stroke-dashoffset: 187; }
+ 50% {
+   stroke-dashoffset: 187/4;
+   transform:rotate(135deg);
+ }
+ 100% {
+   stroke-dashoffset: 187;
+   transform:rotate(450deg);
+ }
 }
