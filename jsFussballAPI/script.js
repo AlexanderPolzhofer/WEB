@@ -14,7 +14,7 @@ var templateStandings = Handlebars.compile(standingSource);
 var countriesTemplate = document.getElementById("countries-template").innerHTML;
 var templateCountries = Handlebars.compile(countriesTemplate);
 
-function loading(){
+function loading() {
 	return '<div class="loader"></div>';
 }
 
@@ -28,12 +28,12 @@ function loadCountries() {
 		}
 	}).then(response => response.json())
 		.then(function (data) {
-			let html = "<table class = 'table'>";
+			let html = "<table class ='table'><thead class='thead-dark'><tr><th scope='col'></th><th scope='col'>Land</th></tr></thead><tbody>";
 			data.response.forEach(element => {
 				html += templateCountries(element);
 			});
 
-			html += "</table>";
+			html += "</tbody></table>";
 			document.getElementById("content").innerHTML = html;
 		})
 		.catch(err => {
@@ -42,7 +42,7 @@ function loadCountries() {
 }
 
 function loadStandings() {
-	document.getElementById("content").innerHTML = "loading...";
+	document.getElementById("content").innerHTML = loading();
 	fetch(urlStandings, {
 		headers: {
 			"x-auth-token": "819babcd7902454f930c154272296d78"
@@ -71,7 +71,7 @@ function loadPremierLeagueTeams() {
 			data.teams.forEach(element => {
 				html += template(element);
 			});
-			html+= "</tbody></table>";
+			html += "</tbody></table>";
 			document.getElementById("content").innerHTML = html;
 		}).catch(function (err) {
 			console.warn("Something went wrong: " + err)
@@ -79,7 +79,7 @@ function loadPremierLeagueTeams() {
 }
 
 function loadBundesligaTeams() {
-	document.getElementById("content").innerHTML = "loading...";
+	document.getElementById("content").innerHTML = loading();
 	var source = document.getElementById("team-template").innerHTML;
 	var template = Handlebars.compile(source);
 
@@ -125,7 +125,14 @@ function onClickCountriesButton() {
 	})
 }
 
+function onClickHomeButton() {
+	document.getElementById("home").addEventListener("click", function () {
+		document.getElementById("content").innerHTML = '<div id="content"></div>';
+	})
+}
+
 onClickPremierLeagueButton();
 onClickBundesligaButton();
 onClickStandingsButton();
 onClickCountriesButton();
+onClickHomeButton();

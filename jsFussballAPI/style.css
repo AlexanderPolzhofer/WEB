@@ -1,15 +1,17 @@
 #content{
   padding: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .flex-container{
   position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 10px;
   border-style: solid;
-  border-color: gray;   
-  background-color:#f3f3f3;
+  border-color: gray;
 }
 
 .container{
@@ -17,7 +19,7 @@
   justify-content:center;
   color:grey;
   padding: 21px;
-  margin: 0 -5px; 
+  margin: 5px; 
 }
 
 #teamsBundesliga img{
@@ -49,11 +51,11 @@ button:hover{
 }
 
 .loader {
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #3498db; /* Blue */
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid gray;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 55px;
+  height: 55px;
   animation: spin 2s linear infinite;
 }
 
