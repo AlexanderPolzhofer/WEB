@@ -18,23 +18,25 @@
 <body>
     <div class="wrapper">
         <div class="container">
+            <img src="https://cdn-icons-png.flaticon.com/512/2817/2817805.png" width="55px">
             <h1>Fußball API</h1>
         </div>
 
         <div class="flex-container">
-            <div type="button"><button class="btn btn-light" id="buttonBundesliga">View Teams 1. Bundesliga</button>
+            <div type="button"><button class="btn btn-secondary" id="buttonBundesliga">View Teams 1. Bundesliga</button>
             </div>
-            <div type="button"><button class="btn btn-light" id="buttonPremierLeague">View Teams Premier League</button>
+            <div type="button"><button class="btn btn-secondary" id="buttonPremierLeague">View Teams Premier
+                    League</button>
             </div>
-            <div type="button"><button class="btn btn-light" id="buttonStandings">View standings</button></div>
-            <div type="button"><button class="btn btn-light" id="buttonCountries">View countries</button></div>
+            <div type="button"><button class="btn btn-secondary" id="buttonStandings">View standings</button></div>
+            <div type="button"><button class="btn btn-secondary" id="buttonCountries">View countries</button></div>
         </div>
 
-        <div id="content" class="ul">
-            <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg>
-        </div>
+        <div id="content"></div>
 
     </div>
+
+
 </body>
 
 <footer>
@@ -45,23 +47,25 @@
     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
     crossorigin="anonymous"></script>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
 
 
 
 <script id="team-template" type="text/x-handlebars-template">
-    <div class="row" data-id = "{{id}}">
-        <div class="col-sm"><img src="{{crestUrl}}" width="50px" alt="clubLogo"></div>
-        <div class="col-sm"><a href="#" link ="teamLinkPlayers">{{name}}</a></div>
-        <div class="col-sm">{{address}}</div>
-        <div class="col-sm">{{email}}</div>
-    </div>
+    <tr data-id = "{{id}}">
+        <td><img src="{{crestUrl}}" width="50px" alt="clubLogo"></td>
+        <td ><a href="#" link ="teamLinkPlayers">{{name}}</a></td>
+        <td >{{address}}</td>
+        <td >{{email}}</td>
+    </tr>
     
  </script>
 
 <script id="standings-template" type="text/x-handlebars-template">
       <tr data-id = "{{id}}">
-        <td><img src={{team.crestUrl}} width="20px"/></td>       
+        <td><img src={{team.crestUrl}} width="50px"/></td>       
         <td>{{team.name}}</td>   
         <td>{{position}}</td>   
         <td>{{points}}</td> 
@@ -72,8 +76,7 @@
     <tr id="countries-table">
         <td><img src="{{flag}}" width="50px" alt="logo"></td>
         <td><a href="#" link ="teamLinkPlayers">{{name}}</a></td>
-    </tr>
-    
+    </tr>    
  </script>
 
 </html>

@@ -15,7 +15,7 @@ var countriesTemplate = document.getElementById("countries-template").innerHTML;
 var templateCountries = Handlebars.compile(countriesTemplate);
 
 function loading(){
-	return '<svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg>';
+	return '<div class="loader"></div>';
 }
 
 function loadCountries() {
@@ -67,10 +67,11 @@ function loadPremierLeagueTeams() {
 		}
 	}).then(response => response.json())
 		.then(function (data) {
-			let html = "";
+			let html = "<table class ='table'><thead class='thead-dark'><tr><th scope='col'></th><th scope='col'>Team</th><th scope='col'>Address</th><th scope='col'>e-mail</th></tr></thead><tbody>";
 			data.teams.forEach(element => {
 				html += template(element);
 			});
+			html+= "</tbody></table>";
 			document.getElementById("content").innerHTML = html;
 		}).catch(function (err) {
 			console.warn("Something went wrong: " + err)
@@ -89,10 +90,11 @@ function loadBundesligaTeams() {
 	})
 		.then(response => response.json())
 		.then(function (data) {
-			let html = "";
+			let html = "<table class ='table'><thead class='thead-dark'><tr><th scope='col'></th><th scope='col'>Team</th><th scope='col'>Position</th><th scope='col'>Punkte</th></tr></thead><tbody>";
 			data.teams.forEach(element => {
 				html += template(element);
 			});
+			html += "</tbody></table>"
 			document.getElementById("content").innerHTML = html;
 		}).catch(function (err) {
 			console.warn("Something went wrong: " + err)
