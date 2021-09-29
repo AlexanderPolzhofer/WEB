@@ -14,6 +14,7 @@ var templateStandings = Handlebars.compile(standingSource);
 var countriesTemplate = document.getElementById("countries-template").innerHTML;
 var templateCountries = Handlebars.compile(countriesTemplate);
 
+
 function loading() {
 	return '<div class="loader"></div>';
 }
