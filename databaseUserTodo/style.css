@@ -1,4 +1,32 @@
 .container{
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    margin-bottom: 3px;
+    background-color: lightgray;
+    width: 255px;
+    height: 55px;
+    text-align: center;
+    padding: 21px;
+    font-size: larger;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    margin: 21px;
+    border: solid;
+}
+
+#input{
+    width: 555px;
     display: flex;
     align-items: center;
     justify-content: center;
