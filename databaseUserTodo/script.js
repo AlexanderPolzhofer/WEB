@@ -6,17 +6,20 @@ function loadTodos() {
         .then(response => response.json())
         .then(function (data) {
             let html = "";
+            let listNumber = 1;
             data.forEach(element => {
-                html += "<div class='row gx-5'><div class='col'><div class='p-3 border bg-light'>" + element.name + "</div></div></div>";
+                html += "<div class='row gx-5'><div class='col'><div class='p-3 border bg-light'>" + listNumber + '. ' + element.name + "</div></div></div>";
+                listNumber++;
             });
             document.getElementById("todolist").innerHTML = html;
         });
 }
 
-document.getElementById("save-button").addEventListener("click", function () {
-    saveTodo();
-})
-
+function clickOnSubmitTodoButton() {
+    document.getElementById("save-button").addEventListener("click", function () {
+        saveTodo();
+    })
+}
 
 function saveTodo() {
 
@@ -34,4 +37,27 @@ function saveTodo() {
         });
 }
 
+function onClickRefresh(){
+    document.getElementById("refresh-button").addEventListener("click", function(){
+        location.reload();
+    })
+}
+
 loadTodos();
+clickOnSubmitTodoButton();
+onClickRefresh();
+
+
+/*
+function deleteItem() {
+
+    let itemNumber = document.getElementById("deleteItem").value;
+
+    fetch("http://localhost:8080/delete/todos", {
+        method: "DELETE"
+    })
+        .then(function (data) {
+            loadTodos();
+        });
+}*/
+
