@@ -40,3 +40,12 @@ li{
 .col{
     margin: 5px;
 }
+
+.p-3:hover{
+    cursor: pointer;
+}
+
+.p-3{
+    display: flex;
+    justify-content: space-between;
+}
