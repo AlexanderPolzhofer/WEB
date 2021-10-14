@@ -1,7 +1,7 @@
 var urlGetTodos = "http://localhost:8080/get/todos";
 var urlPostTodo = "http://localhost:8080/post/todos";
 var urlDeleteTodo = "http://localhost:8080/delete/todos/";
-var urlPutTodo = "http://localhost:8080/delete/todos/";
+var urlPutTodo = "http://localhost:8080/put/todos/";
 
 function loadTodos() {
     fetch(urlGetTodos)
@@ -15,6 +15,9 @@ function loadTodos() {
             });
             document.getElementById("todolist").innerHTML = html;
             registerClickableItems();
+        })
+        .catch(error => {
+            alert('Error:' + error);
         });
 }
 
@@ -37,6 +40,9 @@ function saveTodo() {
     })
         .then(function (data) {
             loadTodos();
+        })
+        .catch(error => {
+            alert('Error:' + error);
         });
 }
 
@@ -69,7 +75,6 @@ function registerClickableItems() {
                 return;
             }
             let id = this.id;
-            console.log("edit")
             this.attributes["data-edit"].nodeValue = false;
             let value = this.innerHTML;
             this.innerHTML = "<input id='data-id' type='text' onBlur='updateItem(" + id + ",   this.value)' value='" + value + "'/>";
@@ -79,6 +84,7 @@ function registerClickableItems() {
 
 
 function updateItem(id, text) {
+    /*
 
     let todo = { "id": id, "name": text };
 
@@ -91,16 +97,43 @@ function updateItem(id, text) {
     })
         .then(function (data) {
             loadTodos();
+        })
+        .catch(error => {
+            alert('Error:' + error);
+        });
+        */
+       myFetch({"id":id,"name":text},urlPutTodo,"PUT")
+}
+
+function myFetch(mJson, mUrl, mMethode){
+
+    fetch(mUrl, {
+        method: mMethode,
+        body: JSON.stringify(mJson),
+        headers: {
+            "content-type": "application/json"
+        }
+    })
+        .then(function (data) {
+            loadTodos();
+        })
+        .catch(error => {
+            alert('Error:' + error);
         });
 }
 
-
 function deleteItem(id) {
 
-    fetch(urlDeleteTodo + id, {
+    myFetch("{}",urlDeleteTodo+id,"DELETE");
+
+/*    fetch(urlDeleteTodo + id, {
         method: "DELETE"
     })
         .then(function (data) {
             loadTodos();
+        })
+        .catch(error => {
+            alert('Error:' + error);
         });
-}
+*/
+    }
